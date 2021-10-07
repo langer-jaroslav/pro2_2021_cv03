@@ -13,6 +13,10 @@ public class Main {
         menu.addItem(new PizzaMenuItem(100, "Good taste", "Margarita"));
         menu.addItem(new PizzaMenuItem(120,"Not so good", "Mushroom special"));
 
+        PizzaMenuItem toDelete = menu.getItems().get(1);
+        menu.removeItem(toDelete);
+        menu.removeItem("Margarita");
+        menu.removeItem("aass");
 
 
 

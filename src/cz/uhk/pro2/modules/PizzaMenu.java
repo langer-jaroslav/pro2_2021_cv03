@@ -15,6 +15,23 @@ public class PizzaMenu {
         items.add(item);
         lastUpdate = LocalDateTime.now();
     }
+    public void removeItem(PizzaMenuItem item){
+        items.remove(item);
+    }
+    public void removeItem(String name){
+        PizzaMenuItem toDelete = null;
+        for (PizzaMenuItem item:
+             items) {
+            if(item.getName().equals(name)){
+                toDelete = item;
+                continue;
+            }
+        }
+
+        if(toDelete!=null)
+            items.remove(toDelete);
+    }
+
     public int menuCount(){
         return items.size();
     }
